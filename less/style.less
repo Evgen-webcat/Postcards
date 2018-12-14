@@ -1,0 +1,203 @@
+//out: ../css/style.css, compress: true, autoprefixer: true
+@import "reset";
+@import "fonts";
+@import "color";
+@import "anim";
+@import "magnific-popup";
+
+body {
+    font-family: Museo Sans;
+    font-weight: normal;
+}
+
+.button {
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 7px;
+    background-color: @yellow;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten(@yellow, 10%);
+    }
+}
+
+.main {
+    padding: 50px 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 510px;
+    background-color: @red;
+
+    .step {
+
+        &_caption {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &_paragraph {
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.125rem;
+        }
+
+        .select {
+            margin-right: 10px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            width: 250px;
+            font-weight: 700;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .create_button {
+            padding: 14px 20px;
+        }
+    }
+}
+
+.postcard {
+    display: none;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: @red;
+
+    &_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 510px;
+        height: 510px;
+        background-size: contain;
+
+        &_text {
+            display: flex;
+            align-items: center;
+            width: 75%;
+            height: 158px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.312rem;
+
+            .name {
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+
+        &.text_1 {
+
+            .postcard_wrap_text {
+                color: #802620;
+            }
+        }
+
+        &.text_2 {
+
+            .postcard_wrap_text {
+                color: #11260d;
+            }
+        }
+
+        &.text_3 {
+            align-items: flex-start;
+        }
+
+        &.text_4 {
+
+            .postcard_wrap_text {
+                color: #232a2b;
+            }
+        }
+
+        &.text_5 {
+
+            .postcard_wrap_text {
+                color: #353c36;
+            }
+        }
+
+        &.text_6 {
+
+            .postcard_wrap_text {
+                color: #e0b094;
+            }
+        }
+
+        &.text_7 {
+
+            .postcard_wrap_text {
+                color: #1d1f17;
+            }
+        }
+
+        &.text_8 {
+
+            .postcard_wrap_text {
+                color: #496480;
+            }
+        }
+    }
+}
+
+.step_compliments,
+.step_images,
+.compliments {
+    display: none;
+}
+
+.step_images {
+
+    .step_images_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .image_wrap {
+            margin-top: 20px;
+            width: 30%;
+
+            .postcards_button {
+                width: 100%;
+
+                .postcards_image {
+                    width: 100%;
+                }
+            }
+
+            .choose_image {
+                margin-top: 5px;
+                padding: 12px 10px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.step_compliments_button {
+    margin-top: 20px;
+    display: block;
+    color: #fff;
+
+    &:hover {
+        opacity: .9;
+    }
+}
+
+@import "media";
