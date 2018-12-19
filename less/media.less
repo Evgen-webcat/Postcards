@@ -1,5 +1,212 @@
 //out: null
 
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
+    .header {
+        .logo_wrap {
+            height: 5vw;
+        }
 
+        .main_menu_link {
+            width: 7vw;
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 1680px) {
+    .header {
+        .logo_wrap {
+            height: 100px;
+        }
+
+        .main_menu_link {
+            width: 7.5vw;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 10%;
+        box-sizing: border-box;
+
+        .logo_wrap {
+            padding: 0;
+            height: 100px;
+        }
+
+        .main_menu_link {
+            width: 100px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .steps {
+        flex-direction: column;
+
+        &::after {
+            display: none;
+        }
+
+        .info,
+        .action {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .step_caption,
+        .paragraphs {
+            width: 100%;
+            text-align: center;
+        }
+
+        .paragraphs {
+            .step_paragraph {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        justify-content: space-between;
+
+        .main_menu {
+            display: none;
+            z-index: -1;
+            padding: 60px 10% 10px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            background-color: rgba(0, 0, 0, 0.89);
+
+            .main_menu_link {
+                justify-content: flex-start;
+                font-size: 1.5rem;
+                color: #f7f7f7;
+                margin-top: 0;
+                padding: 25px 10px 25px 0px;
+                border-right: none;
+                border-bottom: 1px solid rgba(151, 151, 151, 0.4);
+                width: 100%;
+            }
+        }
+
+        .toggle-nav {
+            display: block;
+        }
+    }
+
+    .steps {
+        .info {
+            padding: 50px 10px;
+        }
+
+        .action {
+            padding: 10px;
+        }
+
+        .step {
+            .create_button {
+                display: block;
+                margin-top: 20px;
+                width: 250px;
+            }
+        }
+
+        .step_compliments_button {
+            text-align: center;
+        }
+
+        .step_images .step_images_wrap .image_wrap {
+            width: 47%;
+        }
+    }
+
+    .postcard {
+
+        &_block {
+            padding: 10px;
+        }
+
+        &_wrap {
+            width: 450px;
+            height: 450px;
+
+            &_text {
+                height: 140px;
+                font-size: 1.125rem;
+            }
+        }
+
+        .button_wrap {
+
+            .again_button,
+            .download_button {
+                display: block;
+                margin: 0 0 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 736px) {
+    .header {
+        .logo_wrap {
+            height: 70px;
+        }
+
+        .logo {
+            max-width: 70px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding: 0 5% 0 2%;
+
+        .logo_wrap {
+            height: 60px;
+        }
+
+        .main_menu {
+            padding: 20px 10% 10px;
+        }
+    }
+
+    .steps .info {
+        padding: 20px 10px 50px;
+    }
+
+    .postcard {
+        margin-top: 100px;
+
+        &_wrap {
+            width: 280px;
+            height: 280px;
+
+            &_text {
+                height: 90px;
+                font-size: .75rem;
+
+                .name {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .share {
+
+            div {
+                margin: 0 5px;
+            }
+        }
+    }
 }

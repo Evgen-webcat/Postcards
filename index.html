@@ -5,101 +5,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Document</title>
+    <meta property="og:url" content="https://mcdonalds.by/generator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ГЕНЕРАТОР ЛУЧШИХ ПОЖЕЛАНИЙ" />
+    <meta property="og:description" content="ГЕНЕРАТОР ЛУЧШИХ ПОЖЕЛАНИЙ" />
+    <meta property="og:image" content="http://project.webcat.by/postcards/img/3_new_year_postcards.jpg" />
+    <title>ГЕНЕРАТОР ЛУЧШИХ ПОЖЕЛАНИЙ</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
 </head>
 
 <body>
-    <header>
 
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.2';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <header class="header">
+        <div class="logo_wrap">
+            <a href="https://mcdonalds.by"><img src="img/logo.png" alt="logo" class="logo"></a>
+        </div>
+        <nav class="menu">
+            <ul id="nav" class="main_menu">
+                <li><a href="https://mcdonalds.by" class="main_menu_link menu_link">Главная</a></li>
+                <li><a href="https://mcdonalds.by/ru/menu.html" class="main_menu_link menu_link">Меню</a></li>
+                <li><a href="https://mcdonalds.by/ru/now-in-happy-meal" class="main_menu_link menu_link">Хэппи Мил</a></li>
+                <li><a href="https://mcdonalds.by/ru/contacts.html" class="main_menu_link">Контакты</a></li>
+            </ul>
+            <a id="nav-btn" href="#" class="toggle-nav"><span class="burger_line"></span></a>
+        </nav>
     </header>
     <main class="main">
         <section class="steps">
-            <div class="step select_name">
+            <div class="info">
                 <h1 class="step_caption">ГЕНЕРАТОР ЛУЧШИХ ПОЖЕЛАНИЙ</h1>
-                <p class="step_paragraph">Укажите, кто получит это пожелание:</p>
-                <select class="select">
-                    <option value="woman">Мама</option>
-                    <option value="man">Папа</option>
-                    <option value="woman">Бабуля</option>
-                    <option value="man">Дзядуля</option>
-                    <option value="woman">Цёця</option>
-                    <option value="man">Дзядзя</option>
-                    <option value="man">Брат</option>
-                    <option value="woman">Сястра</option>
-                    <option value="man">Сыночак</option>
-                    <option value="woman">Дачушка</option>
-                    <option value="man">Сабяр</option>
-                    <option value="woman">Сяброўка</option>
-                </select>
-                <button class="button create_button">Создайте пожелание</button>
+                <div class="paragraphs">
+                    <p class="step_paragraph paragraph first_paragraph">Укажите, кто получит это пожелание</p>
+                    <p class="step_paragraph paragraph">Выберите пожелание</p>
+                    <p class="step_paragraph paragraph">Выберите изображение открытки</p>
+                </div>
             </div>
-            <div class="step_compliments">
+            <div class="action">
+                <div class="step select_name">
+                    <select class="select">
+                        <option value="woman">Мама</option>
+                        <option value="man">Папа</option>
+                        <option value="woman">Бабуля</option>
+                        <option value="man">Дзядуля</option>
+                        <option value="woman">Цёця</option>
+                        <option value="man">Дзядзя</option>
+                        <option value="man">Брат</option>
+                        <option value="woman">Сястра</option>
+                        <option value="man">Сыночак</option>
+                        <option value="woman">Дачушка</option>
+                        <option value="man">Сабяр</option>
+                        <option value="woman">Сяброўка</option>
+                    </select>
+                    <button class="button create_button">Создайте пожелание</button>
+                </div>
+                <div class="step_compliments">
 
-            </div>
-            <div class="step_images">
-                <div class="step_images_wrap">
-                    <div class="image_wrap">
-                        <a href="img/postcards/1_new_year_postcards.jpg" class="postcards_button" data-class="text_1">
-                            <img src="img/postcards/01_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
-                    </div>
-                    <div class="image_wrap">
-                        <a href="img/postcards/2_new_year_postcards.jpg" class="postcards_button" data-class="text_2">
-                            <img src="img/postcards/02_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
-                    </div>
-                    <div class="image_wrap">
-                        <a href="img/postcards/3_new_year_postcards.jpg" class="postcards_button" data-class="text_3">
-                            <img src="img/postcards/03_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
-                    </div>
-                    <div class="image_wrap">
-                        <a href="img/postcards/4_new_year_postcards.jpg" class="postcards_button" data-class="text_4">
-                            <img src="img/postcards/04_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
-                    </div>
-                    <div class="image_wrap">
-                        <a href="img/postcards/5_new_year_postcards.jpg" class="postcards_button" data-class="text_5">
-                            <img src="img/postcards/05_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
-                    </div>
-                    <div class="image_wrap">
-                        <a href="img/postcards/6_new_year_postcards.jpg" class="postcards_button" data-class="text_6">
-                            <img src="img/postcards/06_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
-                    </div>
-                    <div class="image_wrap">
-                        <a href="img/postcards/7_new_year_postcards.jpg" class="postcards_button" data-class="text_7">
-                            <img src="img/postcards/07_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
-                    </div>
-                    <div class="image_wrap">
-                        <a href="img/postcards/8_new_year_postcards.jpg" class="postcards_button" data-class="text_8">
-                            <img src="img/postcards/08_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
-                    </div>
-                    <div class="image_wrap">
-                        <a href="img/postcards/9_new_year_postcards.jpg" class="postcards_button" data-class="text_9">
-                            <img src="img/postcards/09_thimb.jpg" alt="postcards_image" class="postcards_image">
-                        </a>
-                        <button class="button choose_image">Выбрать</button>
+                </div>
+                <div class="step_images">
+                    <div class="step_images_wrap">
+                        <div class="image_wrap">
+                            <a href="img/postcards/1_new_year_postcards.jpg" class="postcards_button" data-class="text_1">
+                                <img src="img/postcards/01_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
+                        <div class="image_wrap">
+                            <a href="img/postcards/2_new_year_postcards.jpg" class="postcards_button" data-class="text_2">
+                                <img src="img/postcards/02_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
+                        <div class="image_wrap">
+                            <a href="img/postcards/3_new_year_postcards.jpg" class="postcards_button" data-class="text_3">
+                                <img src="img/postcards/03_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
+                        <div class="image_wrap">
+                            <a href="img/postcards/4_new_year_postcards.jpg" class="postcards_button" data-class="text_4">
+                                <img src="img/postcards/04_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
+                        <div class="image_wrap">
+                            <a href="img/postcards/5_new_year_postcards.jpg" class="postcards_button" data-class="text_5">
+                                <img src="img/postcards/05_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
+                        <div class="image_wrap">
+                            <a href="img/postcards/6_new_year_postcards.jpg" class="postcards_button" data-class="text_6">
+                                <img src="img/postcards/06_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
+                        <div class="image_wrap">
+                            <a href="img/postcards/7_new_year_postcards.jpg" class="postcards_button" data-class="text_7">
+                                <img src="img/postcards/07_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
+                        <div class="image_wrap">
+                            <a href="img/postcards/8_new_year_postcards.jpg" class="postcards_button" data-class="text_8">
+                                <img src="img/postcards/08_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
+                        <div class="image_wrap">
+                            <a href="img/postcards/9_new_year_postcards.jpg" class="postcards_button" data-class="text_9">
+                                <img src="img/postcards/09_thimb.jpg" alt="postcards_image" class="postcards_image">
+                            </a>
+                            <button class="button choose_image">Выбрать</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="postcard">
-            <div class="postcard_wrap">
-                <div class="postcard_wrap_text"></div>
+            <div class="postcard_block">
+                <div class="postcard_wrap" id="postcards">
+                    <img src="" alt="img" class="postcard_img">
+                    <div class="postcard_wrap_text"></div>
+                </div>
+            </div>
+            <div class="button_wrap">
+                <a href="#" class="button download_button" download>Скачать открытку</a>
+                <a href="#" class="button again_button">Создать новую открытку</a>
+            </div>
+            <div class="share">
+                <div id="vk"></div>
+                <div class="fb-share-button" data-href="https://mcdonalds.by/generator" data-layout="button" data-size="small" data-mobile-iframe="false">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Поделиться</a>
+                </div>
+                <div>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
             </div>
         </section>
         <div class="compliments">
