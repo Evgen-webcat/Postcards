@@ -7,6 +7,7 @@ $(document).ready(function () {
     var postcardsImg = {};
 
     $('.create_button').click(function () {
+        $(this).text('Змяніць');
         $('.paragraph').fadeOut();
         $('.step_compliments').slideUp(0);
         $('.step_images').slideUp();
@@ -29,8 +30,9 @@ $(document).ready(function () {
 
     $('.step_compliments').on('click', '.step_compliments_button', function (event) {
         event.preventDefault();
-        $('.paragraph').fadeOut();
+
         complimentsText = $(this).html();
+        $('.paragraph').fadeOut();
         $('.step_compliments').slideUp();
         $('.step_images').slideDown();
         $('.paragraph').eq(2).delay(500).fadeIn();
@@ -77,6 +79,9 @@ $(document).ready(function () {
     $('.again_button').click(function (event) {
         event.preventDefault();
 
+        $('.create_button').text('СТВАРЫЦЕ ПАЖАДАННЕ');
+        $('.next_button').fadeOut(0);
+        $('.next').fadeIn();
         $('.paragraph').fadeOut(0);
         $('.paragraph').eq(0).fadeIn(0);
         $('.postcard').fadeOut(300, function () {
