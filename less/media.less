@@ -24,8 +24,22 @@
         }
     }
 
-    .steps .info_steps_block_paragraph {
-        font-size: .875rem;
+    .steps {
+
+        .step {
+
+            &_caption {
+                font-size: 1.75rem;
+            }
+
+            &_paragraph {
+                font-size: 1.375rem;
+            }
+        }
+
+        .info_steps_block_paragraph {
+            font-size: .875rem;
+        }
     }
 }
 
@@ -48,9 +62,22 @@
 @media (max-width: 1200px) {
     .steps {
         flex-direction: column;
+        min-height: 0;
 
         &::after {
             display: none;
+        }
+
+        .step {
+            .create_button {
+                display: block;
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+
+        .step_compliments_button {
+            text-align: center;
         }
 
         .info,
@@ -59,6 +86,24 @@
             justify-content: center;
             flex-wrap: wrap;
             width: 100%;
+        }
+
+        .info {
+            min-height: 0;
+        }
+
+        .action {
+            height: auto;
+        }
+
+        .step_paragraph.paragraph:nth-child(2),
+        .step_paragraph.paragraph:nth-child(3) {
+            top: 0;
+        }
+
+        .step {
+            width: 100%;
+            padding: 0 10px;
         }
 
         .step_caption,
@@ -71,8 +116,45 @@
             .step_paragraph {
                 width: 100%;
                 text-align: center;
+
+                &.paragraph {
+
+                    .arrow1,
+                    .arrow2,
+                    .arrow3 {
+                        display: none;
+                    }
+                }
             }
         }
+
+        .info_steps {
+            display: none;
+        }
+
+        .social {
+            width: 100%;
+        }
+    }
+
+    .steps .social,
+    .postcard_social {
+        display: none;
+    }
+
+    .share {
+        margin: 15px 0;
+    }
+
+    .footer {
+        display: block;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #ffbc0d;
     }
 }
 
@@ -113,19 +195,7 @@
         }
 
         .action {
-            padding: 10px;
-        }
-
-        .step {
-            .create_button {
-                display: block;
-                margin-top: 20px;
-                width: 250px;
-            }
-        }
-
-        .step_compliments_button {
-            text-align: center;
+            padding: 10px 10px 100px;
         }
 
         .step_images .step_images_wrap .image_wrap {
@@ -146,11 +216,18 @@
         }
 
         .button_wrap {
+            width: 450px;
 
             .again_button,
+            .back_button,
             .download_button {
                 display: block;
                 margin: 0 0 20px;
+                width: 100%;
+            }
+
+            .back_button {
+                margin-bottom: 10px;
             }
         }
     }
@@ -202,10 +279,19 @@
             }
         }
 
+        .button_wrap {
+            width: 280px;
+
+            .again_button,
+            .back_button {
+                padding: 10px;
+            }
+        }
+
         .share {
 
             div {
-                margin: 0 5px;
+                margin-left: 5px;
             }
         }
     }

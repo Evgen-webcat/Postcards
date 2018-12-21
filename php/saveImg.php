@@ -5,5 +5,7 @@ $name = $_POST['name'];
 
 $img = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $img));
 
-file_put_contents('../tmp/postcard'.$name.'.png', $img);
+$savePic = file_put_contents('../tmp/postcard'.$name.'.png', $img);
+
+print_r($savePic);
 ?>

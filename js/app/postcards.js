@@ -41,47 +41,49 @@ $(document).ready(function () {
     $('.choose_image').click(function () {
         complimentsImg = $(this).prev().attr('href');
         complimentsClass = $(this).prev().data('class');
-        $('.steps').fadeOut(300);
-        $('.step_images').delay(300).slideUp(0);
-        $('.postcard_wrap').addClass(complimentsClass);
-        $('.postcard_img').attr('src', complimentsImg);
-        $('.postcard_wrap_text').html(complimentsText);
-        $('.postcard').fadeIn(300);
-        html2canvas(document.querySelector('#postcards')).then(function (canvas) {
-            postcardsImg.data = canvas.toDataURL();
-            postcardsImg.name = (function () {
-                var date = new Date();
-                var rand = Math.floor(Math.random() * 1000);
-                return date.getDate() + '' + date.getMonth() + '' + date.getFullYear() + '' + date.getMilliseconds() + '' + rand;
-            })();
+        $('.locker').fadeIn(300, function () {
+            $('.steps').css('display', 'none');
+            $('.postcard_wrap').addClass(complimentsClass);
+            $('.postcard_img').attr('src', complimentsImg);
+            $('.postcard_wrap_text').html(complimentsText);
+            $('.postcard').css('display', 'block');
+            html2canvas(document.querySelector('#postcards')).then(function (canvas) {
+                postcardsImg.data = canvas.toDataURL();
+                postcardsImg.name = (function () {
+                    var date = new Date();
+                    var rand = Math.floor(Math.random() * 1000);
+                    return date.getDate() + '' + date.getMonth() + '' + date.getFullYear() + '' + date.getMilliseconds() + '' + rand;
+                })();
 
-            $('.download_button').attr('href', 'http://project.webcat.by/postcards/tmp/postcard' + postcardsImg.name + '.png');
+                $('.download_button').attr('href', 'tmp/postcard' + postcardsImg.name + '.png');
 
-            document.getElementById('vk').innerHTML = VK.Share.button({
-                url: 'https://mcdonalds.by/generator',
-                title: 'Открытка',
-                image: 'http://project.webcat.by/postcards/tmp/postcard' + postcardsImg.name + '.png'
-            }, {
-                type: "round_nocount"
-            });
-
-            $.ajax({
-                url: 'php/saveImg.php',
-                method: 'POST',
-                data: postcardsImg,
-                success: function (data) {
-                    console.log('Ок');
-                }
+                $.ajax({
+                    url: 'php/saveImg.php',
+                    method: 'POST',
+                    data: postcardsImg,
+                    success: function (data) {
+                        console.log(data);
+                        $('.locker').fadeOut(300);
+                    }
+                });
             });
         });
+    });
+
+    $('.back_button').click(function (event) {
+        event.preventDefault();
+
+        $('.postcard').fadeOut(300, function () {
+            $('.postcard_wrap').removeClass(complimentsClass);
+        });
+        $('.steps').delay(300).fadeIn(300);
     });
 
     $('.again_button').click(function (event) {
         event.preventDefault();
 
         $('.create_button').text('СТВАРЫЦЕ ПАЖАДАННЕ');
-        $('.next_button').fadeOut(0);
-        $('.next').fadeIn();
+        $('.step_images').delay(300).slideUp(0);
         $('.paragraph').fadeOut(0);
         $('.paragraph').eq(0).fadeIn(0);
         $('.postcard').fadeOut(300, function () {
